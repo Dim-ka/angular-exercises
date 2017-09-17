@@ -5,3 +5,5 @@
 [module2-solution (Two List App)](module2-solution/index.html)
 
 [module3-solution (AJAX + Directive)](module3-solution/index.html)
+
+[module4-solution (Components + ui-router)](module4-solution/index.html)
