@@ -1,0 +1,43 @@
+<div id="main-content" class="container">
+
+  <form name='signupForm' novalidate class="row col-md-4">
+
+    <label>Registration</label>
+
+    <div class="form-group">
+      <label>FirstName:</label>
+      <input type="text" name="firstName" class="form-control"
+        ng-model="reg.user.firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label>LastName:</label>
+      <input type="text" name="lastName" class="form-control"
+        ng-model="reg.user.lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address:</label>
+      <input type="email" name="email" class="form-control"
+        ng-model="reg.user.email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="text" name="phone" class="form-control"
+        ng-model="reg.user.phone" required
+        pattern="(\d{3})-(\d{3})-(\d{4})">
+    </div>
+
+    <div class="form-group">
+      <label>Favourite Dish:</label>
+      <input type="text" name="favdish" class="form-control"
+        ng-model="reg.user.favdish" required>
+    </div>
+
+      <button class="btn btn-default"
+        ng-disbled="signup-form.$invalid"
+        ng-click="reg.submit()">Submit</button>
+  </form>
+</div>
+
