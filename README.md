@@ -7,3 +7,5 @@
 [module3-solution (AJAX + Directive)](module3-solution/index.html)
 
 [module4-solution (Components + ui-router)](module4-solution/index.html)
+
+[module5-solution (Wrapup + Form Validation)](module5-solution/index.html)
