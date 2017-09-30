@@ -8,11 +8,11 @@ function UserService() {
   var service = this;
 
   service.user = {
-    firstName : "First",
-    lastName : "Last",
-    email : "asdf@asd",
-    phone : "9999999",
-    favdish : "as"
+    firstName : "",
+    lastName : "",
+    email : "",
+    phone : "",
+    favdish : ""
   };
 
   service.getUserInfo = function () {

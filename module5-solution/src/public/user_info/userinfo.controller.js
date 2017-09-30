@@ -4,12 +4,26 @@
 angular.module('public')
 .controller('UserInfoController', UserInfoController);
 
-UserInfoController.$inject = ['user'];
-function UserInfoController(user) {
+UserInfoController.$inject = ['user', 'MenuService', 'ApiPath'];
+function UserInfoController(user, MenuService, ApiPath) {
   var $info = this;
   $info.user = user;
 
-  console.log($info.user);
+  /*$info.user = {
+    firstName : "GGGGG",
+    favdish : 'L1'
+  }*/
+
+  var promise = MenuService.getMenuItem($info.user.favdish);
+
+  promise.then(function (favdish) {
+    $info.favdish = favdish;
+    $info.favdish.url = ApiPath + '/images/' + favdish.short_name + '.jpg'
+  });
+
+  $info.empty = function () {
+    return $info.user.firstName == ""
+  };
 }
 
 })();
